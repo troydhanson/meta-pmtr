@@ -3,16 +3,17 @@
 # Yocto Project Development Manual.
 #
 
-DESCRIPTION = "Simple helloworld application"
-SECTION = "examples"
+DESCRIPTION = "proctab process manager"
+HOMEPAGE = "https://troydhanson.github.com/proctab"
+SECTION = "base"
 DEPENDS = ""
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=96af5705d6f64a88e035781ef00e98a8"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCREV = "4ec84957442182f36351f94c0626560ec3ffd487"
-SRC_URI = "git://github.com/DynamicDevices/bbexample.git"
+SRCREV = ""
+SRC_URI = "git://github.com/troydhanson/proctab.git;branch=2016.0"
 
 S = "${WORKDIR}/git"
 

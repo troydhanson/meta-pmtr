@@ -1,4 +1,4 @@
-meta-example
+meta-proctab
 ============
 
-Yocto/OpenEmbedded layer showing example recipe
+Yocto/OpenEmbedded layer for [https://troydhanson.github.com/proctab](proctab)
