@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=014148094f8c384ce40dac7900b965c4"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCREV = "200fc2009af0bb983178e02c94b89d79eb1f64d5"
+SRCREV = "497bd1c89079f8af9dfda3625d02eee10ac4c055"
 SRC_URI = "git://github.com/troydhanson/proctab.git;branch=2016.0"
 
 S = "${WORKDIR}/git"
