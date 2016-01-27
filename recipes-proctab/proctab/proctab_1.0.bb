@@ -22,12 +22,9 @@ inherit autotools systemd
 # See the Yocto mega manuel section 26.134 systemd.bbclass.
 # We install the systemd unit file in ${D}${systemd_unitdir}/system
 # We set SYSTEMD_SERVICE_${PN} to the service file basename.
-# FIXME - do substitutions with setup-initscript and dump output file
-# FIXME  to proctab.service. Let SYSTEMD_SERVICE_${PN} install it.
-# FIXME - else, fix or confirm that ${base_bindir} is what configure ran with
+SYSTEMD_SERVICE_${PN} = "proctab.service"
 do_install_append() {
-  ${S}/initscripts/setup-initscript --install-service --initsys systemd --bindir ${base_bindir} --systemd-unit-dir "${D}/${systemd_unitdir}/system"
-  SYSTEMD_SERVICE_${PN} = "proctab.service"
+  ${S}/initscripts/setup-initscript --initsys systemd --install-service ${D}${systemd_unitdir}/system/proctab.service --bindir ${bindir}
 }
 
 # The autotools configuration I am basing this on seems to have a problem with a race condition when parallel make is enabled
