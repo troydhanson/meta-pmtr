@@ -1,16 +1,13 @@
 meta-proctab
 ============
 
-Yocto/OpenEmbedded layer for [https://troydhanson.github.com/proctab](proctab).
+Yocto/OpenEmbedded layer for [proctab](https://troydhanson.github.com/proctab).
 
 Usage:
 
 * clone this repo
 * add it to conf/bblayers.conf
-* add proctab recipe to an image. E.g., add this to conf/local.conf: 
-
-    IMAGE_INSTALL_append = " proctab"
-
+* add proctab recipe to an image. E.g., add this to conf/local.conf: `IMAGE_INSTALL_append = " proctab"`
 * build an image e.g. `bitbake core-image-minimal`
 
 The resulting image has the executable `/usr/bin/proctab` and the initial,
