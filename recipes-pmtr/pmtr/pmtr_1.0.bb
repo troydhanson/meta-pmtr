@@ -18,10 +18,8 @@ SRC_URI = "git://github.com/troydhanson/pmtr.git"
 
 S = "${WORKDIR}/git"
 
-inherit autotools update-rc.d
-
-INITSCRIPT_NAME = "pmtr"
-
+##################################################################
+# sysvinit based init
 #
 # Place a sysvinit script in /etc/init.d/pmtr.
 # The inherited update-rc.d along with the INITSCRIPT_NAME variable
@@ -31,12 +29,36 @@ INITSCRIPT_NAME = "pmtr"
 # Also create an initially-empty /etc/pmtr.conf
 #
 
+##################################################################
+inherit autotools update-rc.d
+INITSCRIPT_NAME = "pmtr"
+
 do_install_append() {
   install -d ${D}${sysconfdir}/init.d/
   ${S}/initscripts/setup-initscript --initsys sysvinit --install-service ${D}${sysconfdir}/init.d/pmtr --bindir ${bindir}
   touch ${D}${sysconfdir}/pmtr.conf
 }
 
-# The autotools configuration I am basing this on seems to have a problem with a race condition when parallel make is enabled
+##################################################################
+# systemd based init
+#
+# To use, comment out the sysvinit lines above and uncomment below.
+#
+# See the Yocto mega manuel section 26.134 systemd.bbclass.
+# We install the systemd unit file in ${D}${systemd_unitdir}/system
+# We set SYSTEMD_SERVICE_${PN} to the service file basename.
+#
+# Also create an initially-empty /etc/pmtr.conf
+#
+##################################################################
+#inherit autotools systemd
+#SYSTEMD_SERVICE_${PN} = "pmtr.service"
+#
+#do_install_append() {
+#  install -d ${D}${sysconfdir} ${D}${systemd_unitdir}/system/
+#  ${S}/initscripts/setup-initscript --initsys systemd --install-service ${D}${systemd_unitdir}/system/pmtr.service --bindir ${bindir}
+#  touch ${D}${sysconfdir}/pmtr.conf
+#}
+
 PARALLEL_MAKE = ""
 
