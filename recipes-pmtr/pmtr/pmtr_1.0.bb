@@ -13,7 +13,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=014148094f8c384ce40dac7900b965c4"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCREV = "d95e23f69a816155becc5aff9b5705e09e3994a2"
+SRCREV = "4ee30322a288929aa03f82275ee74df3841b4a81"
 SRC_URI = "git://github.com/troydhanson/pmtr.git"
 
 S = "${WORKDIR}/git"
