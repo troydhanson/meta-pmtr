@@ -9,7 +9,7 @@ HOMEPAGE = "https://troydhanson.github.com/pmtr"
 SECTION = "base"
 DEPENDS = ""
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=014148094f8c384ce40dac7900b965c4"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=cbddd154e2d386d9f6f1040e9078c0db"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
