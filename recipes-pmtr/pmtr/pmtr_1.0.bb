@@ -9,11 +9,11 @@ HOMEPAGE = "https://troydhanson.github.com/pmtr"
 SECTION = "base"
 DEPENDS = ""
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=cbddd154e2d386d9f6f1040e9078c0db"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=5c18fe814bfff6ca20c9acca6e32f9e4"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
 
-SRCREV = "575fdc2b1260a66c1ed09fa646a8fcfa3b43b0ce"
+SRCREV = "38a221cedb4276e33b7d326b58e4177f1d359c20"
 SRC_URI = "git://github.com/troydhanson/pmtr.git"
 
 S = "${WORKDIR}/git"
