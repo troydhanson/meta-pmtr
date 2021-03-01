@@ -1,7 +1,7 @@
 meta-pmtr
 =========
 
-Yocto/OpenEmbedded layer for [pmtr](https://troydhanson.github.com/pmtr).
+Yocto/OpenEmbedded layer for [pmtr](https://troydhanson.github.io/pmtr).
 
 Usage:
 

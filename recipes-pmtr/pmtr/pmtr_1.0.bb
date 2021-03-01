@@ -5,7 +5,7 @@
 #
 
 DESCRIPTION = "pmtr process manager"
-HOMEPAGE = "https://troydhanson.github.com/pmtr"
+HOMEPAGE = "https://troydhanson.github.io/pmtr"
 SECTION = "base"
 DEPENDS = ""
 LICENSE = "MIT"
